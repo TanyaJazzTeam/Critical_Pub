@@ -31,7 +31,8 @@
         {
           "name": "électrostatique",
           "complexity": "quatre",
-          "interest": "cinq"
+          "interest": "cinq",
+          "complexity": "111"
         }
       ]
     }
