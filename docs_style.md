@@ -175,7 +175,6 @@ returns.
 (tf.expand_dims(input, 0))  # ⇒ [1, 2, 3, 5]
 ```
 
-### Tensors
 
 When you're talking about a tensor in general, don't capitalize the word
 *tensor*. When you're talking about the specific object that's provided to or
