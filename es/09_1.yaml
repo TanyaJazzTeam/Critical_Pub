@@ -4,16 +4,15 @@ my:
     composition:
       dough:
       - eggs
-      - azúcar
-      - harina
-      - mi
+      - 
+      - 
       cream:
-      - azúcar
-      - Leche
+      - 
+      - 
     dough:
-    - huevos
+    - 
     - sugar
-    - harina
+    - 
     cream:
-    - azúcar
+    - 
     - milk
