@@ -1,8 +1,3 @@
-# 1111
-
-# 222
-
-
 
 ## Empfohlene Vorgehensweise
 
