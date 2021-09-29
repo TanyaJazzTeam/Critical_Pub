@@ -2,35 +2,35 @@
 
 # TensorFlow documentation style guide
 
-## Best practices
+## Empfohlene Vorgehensweise
 
-- Focus on user intent and audience.
-- Use every-day words and keep sentences short.
-- Use consistent sentence construction, wording, and capitalization.
-- Use headings and lists to make your docs easier to scan.
-- The [Google Developer Docs Style Guide](https://developers.google.com/style/highlights) is helpful.
+- Konzentrieren Sie sich auf die Benutzerabsicht und das Publikum.
+- Verwenden Sie alltägliche Wörter und halten Sie die Sätze kurz.
+- Verwenden Sie konsistente Satzkonstruktionen, Formulierungen und Großschreibung.
+- Verwenden Sie Überschriften und Listen, um das Scannen Ihrer Dokumente zu erleichtern.
+- Der [Styleguide für Google Developer Docs](https://developers.google.com/style/highlights) ist hilfreich.
 
-## Markdown
+## Abschlag
 
-With a few exceptions, TensorFlow uses a Markdown syntax similiar to [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) (GFM). This section explains differences between GFM Markdown syntax and the Markdown used for TensorFlow documentation.
+Mit wenigen Ausnahmen verwendet TensorFlow eine Markdown-Syntax ähnlich der von [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/) (GFM). In diesem Abschnitt werden die Unterschiede zwischen der GFM-Markdown-Syntax und dem für die TensorFlow-Dokumentation verwendeten Markdown erläutert.
 
-### Write about code
+### Über Code schreiben
 
-#### Inline mentions of code
+#### Inline-Erwähnungen von Code
 
-Put <code>`backticks`</code> around the following symbols when used in text:
+Setzen Sie <code>`backticks`</code> um die folgenden Symbole, wenn Sie sie im Text verwenden:
 
-- Argument names: <code>`input`</code>, <code>`x`</code>, <code>`tensor`</code>
-- Returned tensor names: <code>`output`</code>, <code>`idx`</code>, <code>`out`</code>
-- Data types: <code>`int32`</code>, <code>`float`</code>, <code>`uint8`</code>
-- Other op names reference in text: <code>`list_diff()`</code>, <code>`shuffle()`</code>
-- Class names: <code>`tf.Tensor`</code>, <code>`Strategy`</code>
-- File name: <code>`image_ops.py`</code>, <code>`/path_to_dir/file_name`</code>
-- Math expressions or conditions: <code>`-1-input.dims() &lt;= dim &lt;=     input.dims()`</code>
+- Argumentnamen: <code>`input`</code> , <code>`x`</code> , <code>`tensor`</code>
+- Zurückgegebene <code>`output`</code> , <code>`idx`</code> , <code>`out`</code>
+- Datentypen: <code>`int32`</code> , <code>`float`</code> , <code>`uint8`</code>
+- Andere Verweise auf <code>`list_diff()`</code> , <code>`shuffle()`</code>
+- Klassennamen: <code>`tf.Tensor`</code> , <code>`Strategy`</code>
+- Dateiname: <code>`image_ops.py`</code> , <code>`/path_to_dir/file_name`</code>
+- Mathematische Ausdrücke oder Bedingungen: <code>`-1-input.dims() &lt;= dim &lt;= input.dims()`</code>
 
 #### Code blocks
 
-Use three backticks to open and close a code block. Optionally, specify the programming language after the first backtick group, for example:
+Verwenden Sie drei Backticks, um einen Codeblock zu öffnen und zu schließen. Geben Sie optional die Programmiersprache nach der ersten Backtick-Gruppe an, zum Beispiel:
 
 <pre><code>
 ```python
@@ -40,44 +40,44 @@ Use three backticks to open and close a code block. Optionally, specify the prog
 
 ### Links in Markdown
 
-#### Links between files in this repository
+#### Links zwischen Dateien in diesem Repository
 
-Use relative links between files in a repository. This works on [tensorflow.org](https://www.tensorflow.org) and [GitHub](https://github.com/tensorflow/docs/tree/master/site/en):<br> <code>\[Custom layers\]\(../tutorials/eager/custom_layers.ipynb\)</code> produces [Custom layers](https://www.tensorflow.org/tutorials/eager/custom_layers) on the site.
+Verwenden Sie relative Links zwischen Dateien in einem Repository. Dies funktioniert auf [tensorflow.org](https://www.tensorflow.org) und [GitHub](https://github.com/tensorflow/docs/tree/master/site/en) :<br> <code>\[Custom layers\]\(../tutorials/eager/custom_layers.ipynb\)</code> erstellt [benutzerdefinierte Ebenen](https://www.tensorflow.org/tutorials/eager/custom_layers) auf der Site.
 
-#### Links to API documentation
+#### Links zur API-Dokumentation
 
-API links are converted when the site is published. To link to a symbol's API reference page, enclose the full symbol path in backticks:
+API-Links werden konvertiert, wenn die Site veröffentlicht wird. Um auf die API-Referenzseite eines Symbols zu verlinken, schließen Sie den vollständigen Symbolpfad in Backticks ein:
 
-- <code>`tf.data.Dataset`</code> produces [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset)
+- <code>`tf.data.Dataset`</code> erzeugt [`tf.data.Dataset`](https://www.tensorflow.org/api_docs/python/tf/data/Dataset)
 
-For the C++ API, use the namespace path:
+Verwenden Sie für die C++-API den Namespace-Pfad:
 
-- `tensorflow::Tensor` produces [tensorflow::Tensor](https://www.tensorflow.org/api_docs/cc/class/tensorflow/tensor)
+- `tensorflow::Tensor` erzeugt [tensorflow::Tensor](https://www.tensorflow.org/api_docs/cc/class/tensorflow/tensor)
 
-#### External links
+#### Externe Links
 
-For external links, including files on <var>https://www.tensorflow.org</var> that are not in the `tensorflow/docs` repository, use standard Markdown links with the full URI.
+Verwenden Sie für externe Links, einschließlich Dateien auf <var>https://www.tensorflow.org</var> , die sich nicht im `tensorflow/docs` , Standard-Markdown-Links mit dem vollständigen URI.
 
-To link to source code, use a link starting with <var>https://www.github.com/tensorflow/tensorflow/blob/master/</var>, followed by the file name starting at the GitHub root.
+Um zum Quellcode zu verlinken, verwenden Sie einen Link, der mit <var>https://www.github.com/tensorflow/tensorflow/blob/master/</var> beginnt, gefolgt vom Dateinamen, der beim GitHub-Stammverzeichnis beginnt.
 
-This URI naming scheme ensures that <var>https://www.tensorflow.org</var> can forward the link to the branch of the code corresponding to the version of the documentation you're viewing.
+Dieses URI-Benennungsschema stellt sicher, dass <var>https://www.tensorflow.org</var> den Link an den Zweig des Codes weiterleiten kann, der der Version der angezeigten Dokumentation entspricht.
 
-Do not include URI query parameters in the link.
+Schließen Sie keine URI-Abfrageparameter in den Link ein.
 
-File paths use underscores for spaces, for example, `custom_layers.ipynb`.
+`custom_layers.ipynb` verwenden Unterstriche für Leerzeichen, beispielsweise custom_layers.ipynb .
 
-Include the file extension in links to use on the site *and* GitHub, for example,<br> <code>\[Custom layers\]\(../tutorials/eager/custom_layers.ipynb\)</code>.
+Fügen Sie die Dateierweiterung in Links ein, die auf der Website *und auf* GitHub verwendet werden sollen, zum Beispiel:<br> <code>\[Custom layers\]\(../tutorials/eager/custom_layers.ipynb\)</code> .
 
-### Math in Markdown
+### Mathe im Markdown
 
-You may use MathJax within TensorFlow when editing Markdown files, but note the following:
+Sie können MathJax innerhalb von TensorFlow verwenden, wenn Sie Markdown-Dateien bearbeiten, beachten Sie jedoch Folgendes:
 
-- MathJax renders properly on [tensorflow.org](https://www.tensorflow.org).
-- MathJax does not render properly on GitHub.
-- This notation can be off-putting to unfamiliar developers.
-- For consistency [tensorflow.org](https://www.tensorflow.org) follows the same  rules as Jupyter/Colab.
+- MathJax rendert ordnungsgemäß auf [tensorflow.org](https://www.tensorflow.org) .
+- MathJax rendert auf GitHub nicht richtig.
+- Diese Notation kann für unbekannte Entwickler abschreckend sein.
+- Aus Konsistenzgründen [folgt tensorflow.org](https://www.tensorflow.org) denselben Regeln wie Jupyter/Colab.
 
-Use <code>$$</code> around a block of MathJax:
+Verwenden Sie <code>$$</code> um einen Block von MathJax:
 
 <pre><code>$$
 E=\frac{1}{2n}\sum_x\lVert (y(x)-y'(x)) \rVert^2
@@ -85,51 +85,51 @@ $$</code></pre>
 
 $$ E=\frac{1}{2n}\sum_x\lVert (y(x)-y'(x)) \rVert^2 $$
 
-Wrap inline MathJax expressions with <code>$ ... $</code>:
+Wrap Inline MathJax-Ausdrücke mit <code>$ ... $</code> :
 
 <pre><code>
 This is an example of an inline MathJax expression: $ 2 \times 2 = 4 $
 </code></pre>
 
-This is an example of an inline MathJax expression: $ 2 \times 2 = 4 $
+Dies ist ein Beispiel für einen Inline-MathJax-Ausdruck: $ 2 \times 2 = 4 $
 
-<code>\( ... \)</code> delimiters also work for inline math, but the $ form is sometimes more readable.
+<code>\( ... \)</code> Trennzeichen funktionieren auch für Inline-Mathematik, aber das $-Formular ist manchmal besser lesbar.
 
-Note: If you need to use a dollar sign in text or MathJax expressions, escape it with a leading slash: `\$`. Dollar signs within code blocks (such as Bash variable names) do not need to be escaped.
+Hinweis: Wenn Sie ein Dollarzeichen in Text oder MathJax-Ausdrücken verwenden müssen, maskieren Sie es mit einem führenden Schrägstrich: `\$` . Dollarzeichen innerhalb von Codeblöcken (wie Bash-Variablennamen) müssen nicht mit Escapezeichen versehen werden.
 
-## Prose style
+## Prosa-Stil
 
-If you are going to write or edit substantial portions of the narrative documentation, please read the [Google Developer Documentation Style Guide](https://developers.google.com/style/highlights).
+Wenn Sie wesentliche Teile der narrativen Dokumentation schreiben oder bearbeiten möchten, lesen Sie bitte den Styleguide für die [Google-Entwicklerdokumentation](https://developers.google.com/style/highlights) .
 
-### Principles of good style
+### Prinzipien des guten Stils
 
-- *Check the spelling and grammar in your contributions.* Most editors include a spell checker or have an available spell-checking plugin. You can also paste your text into a Google Doc or other document software for a more robust spelling and grammar check.
-- *Use a casual and friendly voice.* Write TensorFlow documentation like a conversation—as if you're talking to another person one-on-one. Use a supportive tone in the article.
+- *Überprüfen Sie die Rechtschreibung und Grammatik in Ihren Beiträgen.* Die meisten Editoren enthalten eine Rechtschreibprüfung oder ein verfügbares Rechtschreibprüfungs-Plugin. Sie können Ihren Text auch in ein Google-Dokument oder eine andere Dokumentsoftware einfügen, um eine zuverlässigere Rechtschreib- und Grammatikprüfung zu erhalten.
+- *Verwenden Sie eine lockere und freundliche Stimme.* Schreiben Sie die TensorFlow-Dokumentation wie ein Gespräch – als würden Sie mit einer anderen Person eins zu eins sprechen. Verwenden Sie im Artikel einen unterstützenden Ton.
 
-Note: Being less formal does not mean being less technical. Simplify your prose, not the technical content.
+Hinweis: Weniger formell zu sein bedeutet nicht, weniger technisch zu sein. Vereinfachen Sie Ihre Prosa, nicht den technischen Inhalt.
 
-- *Avoid disclaimers, opinions, and value judgements.* Words like "easily", "just", and "simple" are loaded with assumptions. Something might seem easy to you, but be difficult for another person. Try to avoid these whenever possible.
-- *Use simple, to the point sentences without complicated jargon.* Compound sentences, chains of clauses, and location-specific idioms can make text hard to understand and translate. If a sentence can be split in two, it probably should. Avoid semicolons. Use bullet lists when appropriate.
-- *Provide context.* Don't use abbreviations without explaining them. Don't mention non-TensorFlow projects without linking to them. Explain why the code is written the way it is.
+- *Vermeiden Sie Haftungsausschlüsse, Meinungen und Werturteile.* Wörter wie „einfach“, „nur“ und „einfach“ sind voller Annahmen. Etwas mag Ihnen leicht erscheinen, aber für eine andere Person schwierig sein. Versuchen Sie diese nach Möglichkeit zu vermeiden.
+- *Verwenden Sie einfache, prägnante Sätze ohne komplizierten Jargon.* Zusammengesetzte Sätze, Satzketten und ortsspezifische Redewendungen können dazu führen, dass Texte schwer zu verstehen und zu übersetzen sind. Wenn ein Satz in zwei Teile geteilt werden kann, sollte er es wahrscheinlich tun. Vermeiden Sie Semikolons. Verwenden Sie gegebenenfalls Aufzählungslisten.
+- *Kontext bereitstellen.* Verwenden Sie keine Abkürzungen, ohne sie zu erklären. Erwähnen Sie keine Nicht-TensorFlow-Projekte, ohne sie zu verlinken. Erklären Sie, warum der Code so geschrieben ist, wie er ist.
 
-## Usage guide
+## Gebrauchsanweisung
 
 ### Ops
 
-Use `# ⇒` instead of a single equal sign when you want to show what an op returns.
+Verwenden Sie `# ⇒` anstelle eines einzelnen Gleichheitszeichens, wenn Sie anzeigen möchten, was eine Operation zurückgibt.
 
 ```python
 # 'input' is a tensor of shape [2, 3, 5]
 (tf.expand_dims(input, 0))  # ⇒ [1, 2, 3, 5]
 ```
 
-### Tensors
+### Tensoren
 
-When you're talking about a tensor in general, don't capitalize the word *tensor*. When you're talking about the specific object that's provided to or returned from an op, then you should capitalize the word *Tensor* and add backticks around it because you're talking about a `Tensor` object.
+Wenn Sie im Allgemeinen von einem Tensor sprechen, schreiben Sie das Wort *tensor* nicht groß. Wenn Sie über das spezifische Objekt sprechen, das einer *Operation bereitgestellt oder von einer Operation zurückgegeben wird, sollten Sie das Wort Tensor* groß schreiben und Backticks hinzufügen, da Sie von einem `Tensor` Objekt sprechen.
 
-Don't use the word *Tensors* (plural) to describe multiple `Tensor` objects unless you really are talking about a `Tensors` object. Instead, say "a list (or collection) of `Tensor` objects".
+Sie nicht das Wort *Tensoren* (Plural) verwenden , um zu beschreiben mehrere `Tensor` - Objekte , wenn Sie wirklich sprechen von einem `Tensors` - Objekt. Sagen Sie stattdessen "eine Liste (oder Sammlung) von `Tensor` Objekten".
 
-Use the word *shape* to detail the dimensions of a tensor, and show the shape in square brackets with backticks. For example:
+Verwenden Sie das Wort *Form,* um die Abmessungen eines Tensors anzugeben, und zeigen Sie die Form in eckigen Klammern mit Backticks an. Zum Beispiel:
 
 <pre><code>
 If `input` is a three-dimensional tensor with shape `[3, 4, 3]`, this operation
