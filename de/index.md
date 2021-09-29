@@ -29,9 +29,7 @@ Core Web Vitals sind die Teilmenge der Web Vitals, die für alle Webseiten gelte
 
 Die Metriken, aus denen Core Web Vitals besteht, werden [sich im](#evolving-web-vitals) Laufe der Zeit weiterentwickeln. Das aktuelle Set für 2020 konzentriert sich auf drei Aspekte der Benutzererfahrung – *Laden* , *Interaktivität* und *visuelle Stabilität* – und umfasst die folgenden Metriken (und ihre jeweiligen Schwellenwerte):
 
-<div class="w-stack w-stack--center w-stack--md">
-<img src="lcp_ux.svg" width="400px" height="350px" alt="Größte Empfehlungen für Contentful Paint-Schwellenwerte"><img src="fid_ux.svg" width="400px" height="350px" alt="Empfehlungen zum Schwellenwert für die erste Eingangsverzögerung"><img src="cls_ux.svg" width="400px" height="350px" alt="Empfehlungen zum Schwellenwert für kumulative Layoutverschiebung">
-</div>
+<div class="w-stack w-stack--center w-stack--md"> <img src="lcp_ux.svg" width="400px" height="350px" alt="Größte Empfehlungen für Contentful Paint-Schwellenwerte"><img src="fid_ux.svg" width="400px" height="350px" alt="Empfehlungen zum Schwellenwert für die erste Eingangsverzögerung"><img src="cls_ux.svg" width="400px" height="350px" alt="Empfehlungen zum Schwellenwert für kumulative Layoutverschiebung"> </div>
 
 - **[Größter gehalt Paint (LCP)](/lcp/)** : Maßnahmen *Ladeleistung.* Um eine gute Benutzererfahrung zu bieten, sollte LCP innerhalb von **2,5 Sekunden** nach dem ersten Laden der Seite erfolgen.
 - **[First Input Delay (FID)](/fid/)** : misst die *Interaktivität* . Um eine gute Benutzererfahrung zu bieten, sollten Seiten eine FID von weniger als **100 Millisekunden haben** .
